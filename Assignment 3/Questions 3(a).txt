@@ -1,0 +1,69 @@
+SQL Practice Set: WHERE, AND, DateTime Operations
+
+TABLE: sales_transactions
+
+Columns: TransactionID, CustomerName, Product, Amount, Quantity, Location, PurchasedOn, SalesRep
+
+Questions:
+1. List all transactions where Amount is greater than 2000.
+2. Show all sales for Laptop in Mumbai.
+3. Find sales with Quantity more than 3 and Amount less than 1000.
+4. List transactions by CustomerName = 'Customer5' where Amount is between 500 and 1500.
+5. Find all sales made in 2025.
+6. Show all transactions where SalesRep is 'Rep2' and PurchasedOn is after 2024-12-31.
+7. List sales for 'Monitor' and Amount > 1500.
+8. Find sales in Delhi for Quantity >= 4 after Jan 1, 2025.
+9. Show transactions where Amount < 1000, Product is 'Keyboard', and PurchasedOn is in 2024.
+10. Display all sales made by 'Rep5' in Bangalore.
+11. List transactions where PurchasedOn is weekend (Saturday/Sunday).
+12. Find transactions with Amount >= 2500 and Location not 'Chennai'.
+13. Show all mouse sales before July 1, 2024.
+14. List sales by 'Customer10' after 2024-06-30 for Amount between 500 and 1200.
+15. Find all sales with Product 'Desk' in 2025 where Quantity > 2.
+16. Show sales for 'Rep8' with Amount < 700 and Quantity = 1.
+17. Show transactions for 'Webcam' in Kolkata during March 2025.
+18. List sales by 'Customer3' in Mumbai for Amount > 2000.
+19. Find transactions with Quantity = 5 and PurchasedOn is between 2025-05-01 and 2025-05-31.
+20. List all keyboard sales in Bangalore made by 'Rep7' after 2024-11-15.
+21. Show sales with Amount < 900 and Location is not Delhi.
+22. List all transactions for 'Chair' on or after 2024-09-01 with Amount <= 1500.
+23. Show transactions for 'Rep4' in Chennai for Quantity > 3.
+24. Find sales for 'Monitor' in 2024 where Amount is less than 1500.
+25. List all transactions by 'Rep9' before 2024-04-01.
+26. List sales made in Kolkata for laptop with Amount > 2200.
+27. Show all desk sales in 2025 by SalesRep 'Rep1'.
+28. Find salesperson with transactions in all locations. (Advanced question: use GROUP BY and COUNT DISTINCT)
+29. Show all headphone sales where Amount < 800 or Quantity > 2.
+30. Find transactions where CustomerName is 'Customer1', Amount > 1800, and PurchasedOn is after Feb 1, 2025.
+
+Answers:
+1. SELECT * FROM sales_transactions WHERE Amount > 2000;
+2. SELECT * FROM sales_transactions WHERE Product = 'Laptop' AND Location = 'Mumbai';
+3. SELECT * FROM sales_transactions WHERE Quantity > 3 AND Amount < 1000;
+4. SELECT * FROM sales_transactions WHERE CustomerName = 'Customer5' AND Amount BETWEEN 500 AND 1500;
+5. SELECT * FROM sales_transactions WHERE YEAR(PurchasedOn) = 2025;
+6. SELECT * FROM sales_transactions WHERE SalesRep = 'Rep2' AND PurchasedOn > '2024-12-31';
+7. SELECT * FROM sales_transactions WHERE Product = 'Monitor' AND Amount > 1500;
+8. SELECT * FROM sales_transactions WHERE Location = 'Delhi' AND Quantity >= 4 AND PurchasedOn > '2025-01-01';
+9. SELECT * FROM sales_transactions WHERE Amount < 1000 AND Product = 'Keyboard' AND YEAR(PurchasedOn) = 2024;
+10. SELECT * FROM sales_transactions WHERE SalesRep = 'Rep5' AND Location = 'Bangalore';
+11. SELECT * FROM sales_transactions WHERE DAYOFWEEK(PurchasedOn) IN (1, 7);
+12. SELECT * FROM sales_transactions WHERE Amount >= 2500 AND Location <> 'Chennai';
+13. SELECT * FROM sales_transactions WHERE Product = 'Mouse' AND PurchasedOn < '2024-07-01';
+14. SELECT * FROM sales_transactions WHERE CustomerName = 'Customer10' AND PurchasedOn > '2024-06-30' AND Amount BETWEEN 500 AND 1200;
+15. SELECT * FROM sales_transactions WHERE Product = 'Desk' AND YEAR(PurchasedOn) = 2025 AND Quantity > 2;
+16. SELECT * FROM sales_transactions WHERE SalesRep = 'Rep8' AND Amount < 700 AND Quantity = 1;
+17. SELECT * FROM sales_transactions WHERE Product = 'Webcam' AND Location = 'Kolkata' AND MONTH(PurchasedOn) = 3 AND YEAR(PurchasedOn) = 2025;
+18. SELECT * FROM sales_transactions WHERE CustomerName = 'Customer3' AND Location = 'Mumbai' AND Amount > 2000;
+19. SELECT * FROM sales_transactions WHERE Quantity = 5 AND PurchasedOn BETWEEN '2025-05-01' AND '2025-05-31';
+20. SELECT * FROM sales_transactions WHERE Product = 'Keyboard' AND Location = 'Bangalore' AND SalesRep = 'Rep7' AND PurchasedOn > '2024-11-15';
+21. SELECT * FROM sales_transactions WHERE Amount < 900 AND Location <> 'Delhi';
+22. SELECT * FROM sales_transactions WHERE Product = 'Chair' AND PurchasedOn >= '2024-09-01' AND Amount <= 1500;
+23. SELECT * FROM sales_transactions WHERE SalesRep = 'Rep4' AND Location = 'Chennai' AND Quantity > 3;
+24. SELECT * FROM sales_transactions WHERE Product = 'Monitor' AND YEAR(PurchasedOn) = 2024 AND Amount < 1500;
+25. SELECT * FROM sales_transactions WHERE SalesRep = 'Rep9' AND PurchasedOn < '2024-04-01';
+26. SELECT * FROM sales_transactions WHERE Location = 'Kolkata' AND Product = 'Laptop' AND Amount > 2200;
+27. SELECT * FROM sales_transactions WHERE Product = 'Desk' AND SalesRep = 'Rep1' AND YEAR(PurchasedOn) = 2025;
+28. SELECT SalesRep FROM sales_transactions GROUP BY SalesRep HAVING COUNT(DISTINCT Location) = 5;
+29. SELECT * FROM sales_transactions WHERE Product = 'Headphone' AND (Amount < 800 OR Quantity > 2);
+30. SELECT * FROM sales_transactions WHERE CustomerName = 'Customer1' AND Amount > 1800 AND PurchasedOn > '2025-02-01';
