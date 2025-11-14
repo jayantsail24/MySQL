@@ -1,0 +1,1 @@
+This is Assignment 1 of MySQL, and it includes questions based on the WHERE clause.
