@@ -1,0 +1,1 @@
+this file has questions on aggregate funtions that we going to use in the group by query.
