@@ -1,0 +1,1 @@
+this folder contains three files which includes sql group by questions from basic to hard level.
