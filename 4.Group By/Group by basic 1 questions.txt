@@ -1,0 +1,59 @@
+Easy
+1.Find total amount received from each payment mode.
+2.Find average amount paid by each customer.
+3.Show payment modes where total amount collected is greater than 100.
+4.Find customers who paid more than 50 in total.
+5.Display total number of payments made by each mode.
+6.Find the count of transactions per payment mode having more than 2 payments.
+7.Show payment modes with average payment amount greater than 40.
+8.List customers whose maximum single payment is greater than 70.
+9.Display payment modes where total amount is between 100 and 200.
+10.Find customers who made payments totaling less than 60.
+
+intermediate
+11.Find the total and average amount paid by each payment mode.
+12.Show payment modes where the minimum payment amount is greater than 30.
+13.Find how many unique customers used each payment mode and show only those with more than 1 customer.
+14.Find payment modes with total payment greater than the average total amount across all modes.
+15.Show customers who made more than 2 payments in total. 
+17.Find payment modes that contributed more than 25% of total revenue. 
+18.Show customers whose average payment amount is greater than 50.
+19.Find the total payments for each customer and mode combination where total > 70.
+20.Display payment modes that had transactions on more than 3 distinct dates.
+
+question of other functions used in group by
+ASC
+1.Show total amount spent by each customer sorted in ascending order of total.
+2.List each product with the number of orders sorted A → Z by product name.
+
+DESC
+1.Show total revenue per product sorted from highest to lowest.
+2.Display customers sorted by their maximum order amount in descending order.
+
+LIMIT
+1.Show the top 5 customers by total spending.
+2.Show the first 3 products based on number of orders.
+
+OFFSET
+1.Show customers ranked by total spending, skip the top 5, then show next 5.
+2.Show products ordered by total revenue, skip first 3, show next 2.
+
+DISTINCT
+(DISTINCT becomes useless with GROUP BY, so we convert it logically)
+1.Group orders by customer_location to display all unique locations.
+
+ORDER BY
+1.Show total revenue per day (group by order_date) sorted from oldest to newest.
+2.Show total orders per product sorted by order_count in descending order.
+
+WHERE Clause 
+1.Find each customer’s total spending for orders where amount > 500.
+2.Find total orders per customer for orders placed before '2024-05-01'.
+3.Show total revenue per product where price < 200.
+4.Find number of orders per city for customers located in 'Mumbai'.
+
+HAVING Clause
+1.Find customers whose total spending is greater than 1000.
+2.Show products where the average order amount is more than 300.
+3.Find cities where total revenue exceeds 2000.
+4.Show customers whose highest single order value is greater than 800.

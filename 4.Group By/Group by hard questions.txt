@@ -1,0 +1,42 @@
+📚 INTERMEDIATE (1-7)
+❓ Question 1: Find all categories where the average price is above $100, ordered by average price descending.
+
+❓ Question 2: Show customers who have made more than 3 orders, along with their total spending, ordered by total spending.
+
+❓ Question 3: Find all cities where total orders exceed $2000, but only include orders from 2024.
+
+❓ Question 4: Show categories where more than 20 items have been sold in total, ordered by total quantity sold.
+
+❓ Question 5: Find customers who bought Electronics products and spent more than $1000 total on Electronics.
+
+❓ Question 6: Show the top 5 products (by name) that have generated more than $500 in total revenue.
+
+❓ Question 7: Find all months in 2023 where more than 15 orders were placed, ordered chronologically.
+
+🔥 HARD (8-14)
+❓ Question 8: Show categories and cities combination where average order value is above $200 and total orders exceed 5.
+
+❓ Question 9: Find customers who have bought from at least 3 different categories and spent more than $1500 total.
+
+❓ Question 10: Show products where the price variance is high (max price - min price > $50) and sold more than twice.
+
+❓ Question 11: Find the top 3 most profitable months across both years, but only include months with more than 8 orders.
+
+❓ Question 12: Show customers who have consistently high-value orders (every order > $100) and made at least 4 orders.
+
+❓ Question 13: Find quarterly performance: quarters with more than 25 orders and average order value above $150.
+
+❓ Question 14: Show cities where the total number of Electronics orders is greater than 3 and average Electronics price exceeds $500.
+
+💀 HELL (15-20)
+❓ Question 15: Find category-location pairs where the highest single order exceeds 5 times the category's minimum price, with at least 4 orders in that location.
+
+❓ Question 16: Show customers whose spending pattern is 'volatile' - standard deviation of their order values exceeds $300, minimum 5 orders.
+
+❓ Question 17: Find cities that have sold products from at least 5 different categories, where no single category represents less than 10% of total city orders.
+
+❓ Question 18: Show product-year combinations where the total revenue increased compared to the overall dataset average, minimum 6 orders per product-year.
+
+❓ Question 19: Find customers who have made purchases in at least 4 different months across both years, with total spending above $2000.
+
+❓ Question 20: Ultimate Challenge: Show category-customer combinations where the customer's quantity per order average is below 2, but their spending per order average exceeds the overall dataset's 90th percentile, minimum 3 orders.
